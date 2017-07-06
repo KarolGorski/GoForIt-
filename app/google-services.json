@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "241791407968",
+    "firebase_url": "https://goforit-f4738.firebaseio.com",
+    "project_id": "goforit-f4738",
+    "storage_bucket": "goforit-f4738.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:241791407968:android:826f5e3e7313fef7",
+        "android_client_info": {
+          "package_name": "alisprojects.goforitonnd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "241791407968-8b9sioln2n6o3epmeq8jb4bmr7pt0fge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARAdfK-1QqM7MV8QyVkXayv6Pru3qHfqg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

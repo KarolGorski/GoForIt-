@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/goforit">
+
+    <EditText
+        android:id="@+id/emailregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="E-mail"
+        android:layout_above="@+id/passwordregister"
+        android:layout_alignStart="@+id/passwordregister" />
+
+    <EditText
+        android:id="@+id/passwordregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:inputType="textPassword"
+
+        android:hint="Password"
+        android:layout_above="@+id/REGISTER"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/REGISTER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="47dp"
+        android:text="REGISTER"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="26dp"
             android:text="LOGIN"
-            android:layout_above="@+id/checkedTextView"
+            android:layout_above="@+id/clickToRegister"
             android:layout_centerHorizontal="true" />
 
     <EditText
@@ -25,28 +25,29 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Password"
+        android:inputType="textPassword"
         android:layout_above="@+id/submit"
         android:layout_alignLeft="@+id/email"
-        android:layout_alignStart="@+id/email" />
+        android:layout_alignStart="@+id/email"
+        android:hint="Password"
+        />
 
     <EditText
         android:id="@+id/email"
+        android:hint="E-mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="54dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:selectAllOnFocus="false"
-        android:singleLine="false"
-        android:text="Login"
+
         android:layout_alignBottom="@+id/password"
-        android:layout_alignLeft="@+id/checkedTextView"
-        android:layout_alignStart="@+id/checkedTextView" />
+        android:layout_alignLeft="@+id/clickToRegister"
+        android:layout_alignStart="@+id/clickToRegister" />
 
     <CheckedTextView
-        android:id="@+id/checkedTextView"
+        android:id="@+id/clickToRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

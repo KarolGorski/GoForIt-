@@ -33,4 +33,10 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.microsoft.azure:azure-mobile-android:3.2.0@aar'
     compile 'com.microsoft.azure:azure-notifications-handler:1.0.1@jar'
+
+
+    compile 'com.google.firebase:firebase-auth:11.0.0'
+
 }
+
+apply plugin: 'com.google.gms.google-services'
