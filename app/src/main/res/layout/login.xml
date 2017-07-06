@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/goforit"
+        android:backgroundTint="#32dd6800"
+        android:backgroundTintMode="src_over"
+        android:id="@+id/background">
+
+        <Button
+            android:id="@+id/submit"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:text="LOGIN"
+            android:layout_above="@+id/checkedTextView"
+            android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Password"
+        android:layout_above="@+id/submit"
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignStart="@+id/email" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="Login"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignLeft="@+id/checkedTextView"
+        android:layout_alignStart="@+id/checkedTextView" />
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text=" No account yet? Click to register."
+        android:clickable="true"/>
+</RelativeLayout>
