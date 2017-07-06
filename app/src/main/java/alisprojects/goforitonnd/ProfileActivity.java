@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -53,5 +54,14 @@ public class ProfileActivity extends AppCompatActivity {
 
         }});
 
+
+        databaseReference= FirebaseDatabase.getInstance().getReference();
+        editTextFullName=(EditText) findViewById(R.id.FullNameEditText);
+        save=(Button) findViewById(R.id.GoInButton);
+
+        save.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }});
     }
 }

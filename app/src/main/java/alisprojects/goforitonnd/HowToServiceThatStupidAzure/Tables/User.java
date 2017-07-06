@@ -5,97 +5,101 @@ package alisprojects.goforitonnd.HowToServiceThatStupidAzure.Tables;
  */
 
 public class User {
-    @com.google.gson.annotations.SerializedName("id")
-    private String mId;
 
-    @com.google.gson.annotations.SerializedName("name")
-    private String mName;
+    String[] Forms={"Ehh.. It can only get better...",
+            "Mhmm...Do or do not. There is no trying!",
+            "Meh..Not as bad as it could be.",
+            "Not bad!",
+            "Nice! You get better and better!",
+            "Wow! Almost the best possible form!",
+            "Ohh.. We have a badass here"};
 
-    @com.google.gson.annotations.SerializedName("surname")
-    private String mSurname;
+    static private int Id=0;
+    private String Name;
+    private String Email;
+    private int Level;
+    private int Experience;
+    private String  TodaysForm;
+    private int FormCounter;
 
-    @com.google.gson.annotations.SerializedName("email")
-    private String mEmail;
-
-    @com.google.gson.annotations.SerializedName("password")
-    private String mPassword;
-
-    @com.google.gson.annotations.SerializedName("level")
-    private String mLevel;
-
-    @com.google.gson.annotations.SerializedName("experience")
-    private int mExperience;
-
-    @com.google.gson.annotations.SerializedName("dodaysform")
-    private int mTodaysForm;
-
-    @com.google.gson.annotations.SerializedName("complete")
-    private boolean mComplete;
-
-    public User() {
+    public User(String name, String Email) {
+        Id++;
+        this.Name=name;
+        this.Email=Email;
+        Level=1;
+        Experience=0;
+        FormCounter=3;
+        TodaysForm=Forms[FormCounter];
 
     }
+
+    private void resetForm(){
+        TodaysForm=Forms[FormCounter];
+    }
+
 
     @Override
-    public String toString() {
-        return getName()+getSurname();
+    public String toString(){
+
+        return Name;
     }
 
-    public User(String name, String id) {
-        this.setName(name);
-        this.setId(id);
+
+    public int getId() {
+        return Id;
     }
 
-    public String getName() {return mName;}
+    public void setId(int id) {
+        Id = id;
+    }
 
-    public final void setName(String name) {mName = name;}
+    public String getName() {
+        return Name;
+    }
 
-    public String getSurname() {return mSurname;}
-
-    public final void setSurname(String name) {mSurname = name;}
+    public void setName(String name) {
+        Name = name;
+    }
 
     public String getEmail() {
-        return mEmail;
+        return Email;
     }
 
-    public final void setEmail(String email) {
-        mEmail = email;
+    public void setEmail(String email) {
+        Email = email;
     }
 
-    public String getPassword() {return mPassword;}
-
-    public void setPassword(String mPassword) {this.mPassword = mPassword;}
-
-    public String getLevel() {return mLevel;}
-
-    public void setLevel(String mLevel) {this.mLevel = mLevel;}
-
-    public int getExperience() {return mExperience;}
-
-    public void setExperience(int mExperience) {this.mExperience = mExperience;}
-
-    public int getTodaysForm() {return mTodaysForm;}
-
-    public void setTodaysForm(int mTodaysForm) {this.mTodaysForm = mTodaysForm;}
-
-    public String getId() {
-        return mId;
+    public int getLevel() {
+        return Level;
     }
 
-    public final void setId(String id) {
-        mId = id;
+    public void setLevel(int level) {
+        Level = level;
     }
 
-    public boolean isComplete() {
-        return mComplete;
+    public int getExperience() {
+        return Experience;
     }
 
-    public void setComplete(boolean complete) {
-        mComplete = complete;
+    public void setExperience(int experience) {
+        Experience = experience;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        return o instanceof User && ((User) o).mId == mId;
+    public String getTodaysForm() {
+        return TodaysForm;
+    }
+
+    public void increaseTodaysForm() {
+        if(FormCounter<6)
+            FormCounter++;
+        resetForm();
+
+    }
+    public void decreaseTodaysForm(){
+        if(FormCounter>0)
+            FormCounter--;
+        resetForm();
+
+
     }
 }
