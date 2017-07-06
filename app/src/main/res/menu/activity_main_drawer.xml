@@ -3,34 +3,32 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/your_account"
+            android:icon="@drawable/ic_account_box_black_24dp"
+            android:title="Your Account"/>
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
-
+            android:id="@+id/add_task"
+         android:icon="@drawable/ic_menu_plus"
+            android:title="Add Task"/>
+     <item
+         android:id="@+id/calendar"
+         android:icon="@drawable/ic_date_range_black_24dp"
+         android:title="Calendar" />
+     <item
+         android:id="@+id/camera"
+         android:icon="@drawable/ic_menu_gallery"
+         android:title="Camera" />
+     <item
+         android:id="@+id/photos"
+         android:icon="@drawable/ic_menu_slideshow"
+         android:title="Gallery" />
+     <item
+         android:id="@+id/add_picture"
+         android:icon="@drawable/ic_backup_black_24dp"
+         android:title="Add Picture" />
+     <item
+         android:id="@+id/nav_logout"
+         android:icon="@drawable/ic_exit_to_app_black_24dp"
+         android:title="Logout" />
+ </group>
 </menu>

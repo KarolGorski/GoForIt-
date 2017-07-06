@@ -43,7 +43,7 @@ public class Register extends Activity {
 
         if(firebaseAuth.getCurrentUser()!=null){
             finish();
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
         Submit.setOnClickListener(new View.OnClickListener() {

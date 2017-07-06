@@ -1,103 +1,74 @@
 package alisprojects.goforitonnd.HowToServiceThatStupidAzure.Tables;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.*;
+
 /**
  * Created by Karol on 2017-07-06.
  */
 
 public class User {
 
-    String[] Forms={"Ehh.. It can only get better...",
-            "Mhmm...Do or do not. There is no trying!",
-            "Meh..Not as bad as it could be.",
-            "Not bad!",
-            "Nice! You get better and better!",
-            "Wow! Almost the best possible form!",
-            "Ohh.. We have a badass here"};
+    public HashMap<String,String> hmap= new HashMap<String, String>();
 
-    static private int Id=0;
-    private String Name;
-    private String Email;
-    private int Level;
-    private int Experience;
-    private String  TodaysForm;
-    private int FormCounter;
+    public String Name;
+    public String Email;
+    public int Level;
+    public int Experience;
+    public String  TodaysForm;
+    public String FormCounter;
+
+    public User(){
+
+    }
 
     public User(String name, String Email) {
-        Id++;
+        hmap.put("0","Ehh.. It can only get better...");
+        hmap.put("1","Mhmm...Do or do not. There is no trying!");
+        hmap.put("2","Meh..Not as bad as it could be.");
+        hmap.put("3","Not bad!");
+        hmap.put("4","Nice! You get better and better!");
+        hmap.put("5","Wow! Almost the best possible form!");
+        hmap.put("6","Ohh.. We have a badass here! :O");
+
+
+
+
         this.Name=name;
         this.Email=Email;
         Level=1;
         Experience=0;
-        FormCounter=3;
-        TodaysForm=Forms[FormCounter];
+        FormCounter="2";
+        TodaysForm= hmap.get(FormCounter);
 
     }
 
     private void resetForm(){
-        TodaysForm=Forms[FormCounter];
+        TodaysForm= hmap.get(FormCounter);
     }
 
 
     @Override
     public String toString(){
 
-        return Name;
-    }
-
-
-    public int getId() {
-        return Id;
-    }
-
-    public void setId(int id) {
-        Id = id;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getEmail() {
         return Email;
     }
 
-    public void setEmail(String email) {
-        Email = email;
-    }
-
-    public int getLevel() {
-        return Level;
-    }
-
-    public void setLevel(int level) {
-        Level = level;
-    }
-
-    public int getExperience() {
-        return Experience;
-    }
-
-    public void setExperience(int experience) {
-        Experience = experience;
-    }
-
-    public String getTodaysForm() {
-        return TodaysForm;
-    }
-
     public void increaseTodaysForm() {
-        if(FormCounter<6)
-            FormCounter++;
+    int a=Integer.parseInt(TodaysForm);
+        if(a<6)
+            a++;
+        TodaysForm=Integer.toString(a);
         resetForm();
 
     }
     public void decreaseTodaysForm(){
-        if(FormCounter>0)
-            FormCounter--;
+        int a=Integer.parseInt(TodaysForm);
+        if(a>0)
+            a--;
+        TodaysForm=Integer.toString(a);
         resetForm();
 
 

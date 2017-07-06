@@ -47,7 +47,7 @@ public class LoginActivity extends Activity {
 
         if(firebaseAuth.getCurrentUser()!=null){
             finish();
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +76,10 @@ public class LoginActivity extends Activity {
                         progressDialog.dismiss();
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }
+                        else
+                            Toast.makeText(LoginActivity.this,"Wrong e-mail or password, or you are not signed up.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
