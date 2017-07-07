@@ -19,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.firebase.ui.database.FirebaseListAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +28,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -40,6 +44,7 @@ public class YourProfile extends Fragment {
     private int LEV=1;
 
     private ListView LV;
+    private FirebaseListAdapter<Task> mAdapter;
     private Task[] tasks;
     private String[] tasksNames= new String[10];
 
@@ -48,19 +53,34 @@ public class YourProfile extends Fragment {
         // Required empty public constructor
     }
 
+    FirebaseAuth firebaseAuth= FirebaseAuth.getInstance();
+    FirebaseDatabase database=FirebaseDatabase.getInstance();
+    DatabaseReference myRef=database.getReference("Users").child(firebaseAuth.getCurrentUser().getUid());
+    final DatabaseReference myRefTask=database.getReference("Tasks").child(firebaseAuth.getCurrentUser().getUid());
+    final FirebaseUser user = firebaseAuth.getCurrentUser();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-         View view= inflater.inflate(R.layout.fragment_your_profile, container, false);
+         final View view= inflater.inflate(R.layout.fragment_your_profile, container, false);
 
-        FirebaseAuth firebaseAuth= FirebaseAuth.getInstance();
-        FirebaseDatabase database=FirebaseDatabase.getInstance();
-        DatabaseReference myRef=database.getReference("Users").child(firebaseAuth.getCurrentUser().getUid());
-        final DatabaseReference myRefTask=database.getReference();
-        final FirebaseUser user = firebaseAuth.getCurrentUser();
-/**
+        final TextView row=(TextView) view.findViewById(R.layout.singletaskview);
+
+        LV= (ListView) view.findViewById(R.id.listOfTasks);
+        mAdapter = new FirebaseListAdapter<Task>(this.getActivity(), Task.class, R.id.listOfTasks, myRefTask) {
+            @Override
+            protected void populateView(View v, Task model, int position) {
+                row.setText(model.text.toString().trim()+"\n"+model.info.toString().trim());
+            }
+
+
+
+
+        };
+        LV.setAdapter(mAdapter);
+/*
         LV=(ListView) view.findViewById(R.id.listOfTasks);
         initResources();
         initListView();
