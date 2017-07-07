@@ -124,14 +124,6 @@ public class MainActivity extends AppCompatActivity
             AddaTask addatask=new AddaTask();
             FragmentManager manager=getSupportFragmentManager();
             manager.beginTransaction().replace(R.id.fragment,addatask).commit();
-        } else if (id == R.id.calendar) {
-
-        } else if (id == R.id.camera) {
-
-        } else if (id == R.id.photos) {
-
-        } else if (id == R.id.add_picture) {
-
         } else if (id == R.id.nav_logout) {
             FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
             firebaseAuth.signOut();

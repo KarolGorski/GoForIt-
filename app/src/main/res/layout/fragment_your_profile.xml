@@ -24,8 +24,7 @@
         android:layout_height="30dp"
         android:text="Level: "
         android:layout_below="@+id/dayFormText"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="35dp" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:gravity="center"
@@ -33,23 +32,16 @@
         android:id="@+id/userExp"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginEnd="27dp"
         android:text="Experience"
         android:layout_below="@+id/dayFormText"
-        android:layout_alignEnd="@+id/LevelBar" />
+        android:layout_toEndOf="@+id/userLevel"
+        android:layout_marginStart="129dp" />
 
-    <ListView
-        android:textColor="#000000"
-        android:id="@+id/listOfTasks"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
-        android:layout_alignTop="@+id/textView8"
-        android:layout_alignParentStart="true" />
+
 
     <TextView
         android:gravity="center"
-        android:size="40dp"
+        android:textSize="20dp"
         android:textColor="#FFFFFF"
         android:id="@+id/dayFormText"
         android:layout_width="match_parent"
@@ -66,6 +58,13 @@
         android:layout_below="@+id/LevelBar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="22dp"
-        android:text="Your Today tasks" />
+        android:text="Your tasks for today" />
+
+    <ListView
+        android:id="@+id/listOfTasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/todaytasks" />
 
 </RelativeLayout>

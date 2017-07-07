@@ -10,22 +10,7 @@
             android:id="@+id/add_task"
          android:icon="@drawable/ic_menu_plus"
             android:title="Add Task"/>
-     <item
-         android:id="@+id/calendar"
-         android:icon="@drawable/ic_date_range_black_24dp"
-         android:title="Calendar" />
-     <item
-         android:id="@+id/camera"
-         android:icon="@drawable/ic_menu_gallery"
-         android:title="Camera" />
-     <item
-         android:id="@+id/photos"
-         android:icon="@drawable/ic_menu_slideshow"
-         android:title="Gallery" />
-     <item
-         android:id="@+id/add_picture"
-         android:icon="@drawable/ic_backup_black_24dp"
-         android:title="Add Picture" />
+
      <item
          android:id="@+id/nav_logout"
          android:icon="@drawable/ic_exit_to_app_black_24dp"
