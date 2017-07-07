@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "241791407968-5lhqf9jgvt1jjs71gbcuubau51eirlt5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alisprojects.goforitonnd",
+            "certificate_hash": "da657e635eb821929ca6d935062af32381c3f04d"
+          }
+        },
+        {
           "client_id": "241791407968-8b9sioln2n6o3epmeq8jb4bmr7pt0fge.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "241791407968-8b9sioln2n6o3epmeq8jb4bmr7pt0fge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

@@ -62,7 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
         }});
 
 
-        databaseReference= FirebaseDatabase.getInstance().getReference();
+        databaseReference= FirebaseDatabase.getInstance().getReference("Users");
         editTextFullName=(EditText) findViewById(R.id.FullNameEditText);
         save=(Button) findViewById(R.id.GoInButton);
 

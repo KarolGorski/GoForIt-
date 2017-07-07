@@ -7,88 +7,23 @@ package alisprojects.goforitonnd.HowToServiceThatStupidAzure.Tables;
 import java.util.Date;
 
 public class Task {
+    static public int id=0;
+    public String text;
+    public String info;
+    public Date startDate;
 
-    @com.google.gson.annotations.SerializedName("text")
-    private String mText;
+    public String difficulty;
+    public boolean complete;
 
-    @com.google.gson.annotations.SerializedName("id")
-    private String mId;
-
-    @com.google.gson.annotations.SerializedName("complete")
-    private boolean mComplete;
-
-    @com.google.gson.annotations.SerializedName("user_id")
-    private String mUser_ID;
-
-    @com.google.gson.annotations.SerializedName("Hardness")
-    private String mHardness;
-
-    @com.google.gson.annotations.SerializedName("StartTime")
-    private Date mStartTime;
-
-    @com.google.gson.annotations.SerializedName("EndTime")
-    private Date mEndTime;
-
-    public Task() {
+    public Task(){
 
     }
-
-    @Override
-    public String toString() {
-        return getText();
-    }
-
-    public Task(String text, String id) {
-        this.setText(text);
-        this.setId(id);
-        this.setUserID(id);
-    }
-
-    //text
-    public String getText() {
-        return mText;
-    }
-
-    public final void setText(String text) {
-        mText = text;
-    }
-
-    //id
-    public String getId() {return mId;}
-
-    public final void setId(String id) {mId = id;}
-
-    //userID
-    public String getUserID() {return mUser_ID;}
-
-    public final void setUserID(String id) {mUser_ID=id;}
-
-    //Hardness
-    public String getHardness() {return mHardness;}
-
-    public final void setHardness(String hd) {mHardness=hd;}
-
-    //DATES
-    public Date getStartTime() {return mStartTime;}
-
-    public final void setStartTime(Date st) {mStartTime=st;}
-
-    public Date getEndTime() {return mEndTime;}
-
-    public final void setEndTime(Date et) {mEndTime=et;}
-
-    //completion
-    public boolean isComplete() {
-        return mComplete;
-    }
-
-    public void setComplete(boolean complete) {
-        mComplete = complete;
-    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        return o instanceof Task && ((Task) o).mId == mId;
+    public Task(String text, String info, Date sd,String difficulty){
+        id++;
+        this.info=info;
+        this.text=text;
+        this.startDate=sd;
+        this.difficulty=difficulty;
+        complete=false;
     }
 }
